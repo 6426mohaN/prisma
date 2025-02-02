@@ -2,7 +2,7 @@ import prisma from "@/lib/db";
 import Link from "next/link";
 
 export default async function PostsPage(){
-    const posts = await prisma.post.findMany({
+    const posts = await prisma.posts.findMany({
         // where: {
         //     title: {
         //         endsWith: "post"
