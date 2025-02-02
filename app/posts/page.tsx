@@ -1,5 +1,6 @@
 import prisma from "@/lib/db";
 import Link from "next/link";
+import { createPost } from "../actions/actions";
 
 export default async function PostsPage(){
     const posts = await prisma.posts.findMany({
@@ -26,7 +27,7 @@ export default async function PostsPage(){
             </li>
         ))}
         </ul>
-        <form className="flex flex-col gap-y-2 w-[300px]">
+        <form action={createPost}className="flex flex-col gap-y-2 w-[300px]">
             <input type="text"
                     name="title"
                     placeholder="Title"

@@ -16,7 +16,7 @@ datasource db {
 model Posts {
   id        String   @id @default(cuid())
   title     String
-  slug      String   @unique
+  slug      String?  @unique
   content   String
   published Boolean? @default(false)
   updatedAt DateTime @updatedAt
