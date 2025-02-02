@@ -21,9 +21,9 @@ export default async function PostsPage(){
         <ul className=" border-t border-b border-black/10 py-5 leading-8">
         {posts.map((post) => (
             <li key={post.id} className=" flex items-center justify-between px-5">
-                <Link href={`/posts/${post.slug}`}>
+                {/* <Link href={`/posts/${post.slug}`}>
                     {post.title}
-                </Link>
+                </Link> */}
             </li>
         ))}
         </ul>
