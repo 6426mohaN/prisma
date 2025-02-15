@@ -22,3 +22,11 @@ model Posts {
   updatedAt DateTime @updatedAt
   createdAt DateTime @default(now())
 }
+
+model Quiz {
+  id           Int      @id @default(autoincrement())
+  question     String
+  options      Json // Use JSON type to store the options array
+  correctIndex Int
+  createdAt    DateTime @default(now())
+}
